@@ -9,5 +9,13 @@ public class LivroRepository {
    public ArrayList<Livro> listarTodos(){
       return biblioteca;
    }
+   public Livro find(int id){
+      for (Livro livro:biblioteca){
+         if((livro.getId() == id)){
+            return livro;
+         }
+      }
+      return null;
+   }
     
 }
